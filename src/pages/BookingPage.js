@@ -1,9 +1,11 @@
+import ReservationLayout from "../components/ReservationLayout";
+
 function BookingPage() {
   return (
-    <main>
-      <h1>Reserve a Table</h1>
+    <ReservationLayout>
+      <h2>Reserve a Table</h2>
       <p>Booking form will go here.</p>
-    </main>
+    </ReservationLayout>
   );
 }
 

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./App.css";
 
 import BookingPage from "./pages/BookingPage";
 import SummaryPage from "./pages/SummaryPage";

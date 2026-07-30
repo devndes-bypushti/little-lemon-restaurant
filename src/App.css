@@ -1,3 +1,85 @@
-.app {
-  min-height: 100vh;
+.header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.header-content {
+  width: min(100% - 32px, 1100px);
+  min-height: 72px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-mark {
+  font-size: 24px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.menu-button {
+  border: none;
+  background: transparent;
+  padding: 8px;
+
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu-button:focus-visible {
+  outline: 3px solid #495e57;
+  outline-offset: 2px;
+}
+
+.restaurant-banner {
+  width: min(100% - 32px, 1100px);
+  margin: 0 auto;
+  padding: 32px 0 24px;
+}
+
+.restaurant-banner h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.restaurant-location {
+  margin: 8px 0 0;
+  font-size: 16px;
+}
+
+.page-content {
+  width: min(100% - 32px, 600px);
+  margin: 0 auto;
+  padding-bottom: 48px;
+}
+
+.page-content h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  .header-content {
+    min-height: 64px;
+  }
+
+  .restaurant-banner {
+    padding-top: 24px;
+  }
+
+  .restaurant-banner h1 {
+    font-size: 28px;
+  }
 }

@@ -1,9 +1,11 @@
+import ReservationLayout from "../components/ReservationLayout";
+
 function ConfirmationPage() {
   return (
-    <main>
-      <h1>Reservation Confirmed!</h1>
+    <ReservationLayout>
+      <h2>Reservation Confirmed!</h2>
       <p>Confirmation details will go here.</p>
-    </main>
+    </ReservationLayout>
   );
 }
 
