@@ -220,3 +220,142 @@
   outline: 3px solid #f4ce14;
   outline-offset: 3px;
 }
+
+
+
+
+.summary-section,
+.confirmation-section {
+  padding: 16px 0 48px;
+}
+
+.summary-section h2,
+.confirmation-section h2 {
+  margin-bottom: 24px;
+  font-size: 28px;
+}
+
+.summary-card {
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 8px 20px;
+  background-color: #ffffff;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+
+  padding: 18px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-row span {
+  color: #555555;
+}
+
+.summary-row strong {
+  text-align: right;
+}
+
+.summary-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.secondary-button {
+  flex: 1;
+  min-height: 52px;
+  padding: 12px 20px;
+
+  border: 2px solid #495e57;
+  border-radius: 4px;
+
+  background-color: #ffffff;
+  color: #495e57;
+
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.secondary-button:hover {
+  background-color: #f5f5f5;
+}
+
+.secondary-button:focus-visible {
+  outline: 3px solid #f4ce14;
+  outline-offset: 3px;
+}
+
+.summary-actions .primary-button {
+  flex: 1;
+}
+
+.confirmation-section {
+  text-align: center;
+}
+
+.confirmation-icon {
+  width: 64px;
+  height: 64px;
+  margin: 8px auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: #495e57;
+  color: #ffffff;
+
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.confirmation-message {
+  margin-bottom: 28px;
+}
+
+.reservation-number {
+  margin-bottom: 24px;
+  padding: 16px;
+
+  border-radius: 6px;
+  background-color: #f5f5f5;
+}
+
+.reservation-number span,
+.reservation-number strong {
+  display: block;
+}
+
+.reservation-number span {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.reservation-number strong {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.confirmation-section .summary-card {
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .summary-actions {
+    flex-direction: column;
+  }
+
+  .summary-row {
+    align-items: flex-start;
+  }
+}

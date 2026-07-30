@@ -8,18 +8,54 @@ import ConfirmationPage from "./pages/ConfirmationPage";
 function App() {
   const [currentPage, setCurrentPage] = useState("booking");
 
+  const [bookingDetails, setBookingDetails] = useState({
+    date: "",
+    startTime: "",
+    duration: "",
+    guests: 2,
+    seatingType: "",
+  });
+
+  const [reservationNumber, setReservationNumber] = useState("");
+
+  const handleBookingSubmit = (details) => {
+    setBookingDetails(details);
+    setCurrentPage("summary");
+  };
+
+  const handleEditBooking = () => {
+    setCurrentPage("booking");
+  };
+
+  const handleConfirmBooking = () => {
+    const number = `LL-${Math.floor(100000 + Math.random() * 900000)}`;
+
+    setReservationNumber(number);
+    setCurrentPage("confirmation");
+  };
+
   return (
     <>
       {currentPage === "booking" && (
-        <BookingPage />
+        <BookingPage
+          bookingDetails={bookingDetails}
+          onSubmit={handleBookingSubmit}
+        />
       )}
 
       {currentPage === "summary" && (
-        <SummaryPage />
+        <SummaryPage
+          bookingDetails={bookingDetails}
+          onEdit={handleEditBooking}
+          onConfirm={handleConfirmBooking}
+        />
       )}
 
       {currentPage === "confirmation" && (
-        <ConfirmationPage />
+        <ConfirmationPage
+          bookingDetails={bookingDetails}
+          reservationNumber={reservationNumber}
+        />
       )}
     </>
   );

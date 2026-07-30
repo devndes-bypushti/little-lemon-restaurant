@@ -1,12 +1,12 @@
 import { useState } from "react";
 import ReservationLayout from "../components/ReservationLayout";
 
-function BookingPage() {
-  const [date, setDate] = useState("");
-  const [startTime, setStartTime] = useState("");
-  const [duration, setDuration] = useState("");
-  const [guests, setGuests] = useState(2);
-  const [seatingType, setSeatingType] = useState("");
+function BookingPage({ bookingDetails, onSubmit }) {
+  const [date, setDate] = useState(bookingDetails.date);
+  const [startTime, setStartTime] = useState(bookingDetails.startTime);
+  const [duration, setDuration] = useState(bookingDetails.duration);
+  const [guests, setGuests] = useState(bookingDetails.guests);
+  const [seatingType, setSeatingType] = useState(bookingDetails.seatingType);
 
   const [errors, setErrors] = useState({});
 
@@ -45,17 +45,17 @@ function BookingPage() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const isValid = validateForm();
-
-    if (isValid) {
-      console.log({
-        date,
-        startTime,
-        duration,
-        guests,
-        seatingType,
-      });
+    if (!validateForm()) {
+      return;
     }
+
+    onSubmit({
+      date,
+      startTime,
+      duration,
+      guests,
+      seatingType,
+    });
   };
 
   return (
@@ -64,7 +64,6 @@ function BookingPage() {
         <h2>Reserve a Table</h2>
 
         <form onSubmit={handleSubmit} noValidate>
-          {/* Date */}
           <div className="form-group">
             <label htmlFor="date">Date</label>
 
@@ -86,7 +85,6 @@ function BookingPage() {
             )}
           </div>
 
-          {/* Start Time */}
           <div className="form-group">
             <label htmlFor="start-time">Start Time</label>
 
@@ -117,7 +115,6 @@ function BookingPage() {
             )}
           </div>
 
-          {/* Duration */}
           <div className="form-group">
             <label htmlFor="duration">Duration</label>
 
@@ -146,7 +143,6 @@ function BookingPage() {
             )}
           </div>
 
-          {/* Guests */}
           <fieldset className="form-group">
             <legend>Guests</legend>
 
@@ -177,7 +173,6 @@ function BookingPage() {
             </p>
           </fieldset>
 
-          {/* Seating Type */}
           <fieldset className="form-group">
             <legend>Seating Type</legend>
 
