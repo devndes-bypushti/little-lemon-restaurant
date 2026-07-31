@@ -24,7 +24,7 @@ function ConfirmationPage({ bookingDetails, reservationNumber }) {
           ✓
         </div>
 
-        <h2>You're all set!</h2>
+        <h2 className="confirmation-title">You're all set!</h2>
 
         <p className="confirmation-message">
           Your table has been reserved successfully.

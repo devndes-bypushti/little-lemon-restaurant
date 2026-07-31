@@ -27,7 +27,12 @@
 
 import ReservationLayout from "../components/ReservationLayout";
 
-function SummaryPage({ bookingDetails, onEdit, onConfirm }) {
+function SummaryPage({
+  bookingDetails,
+  onEdit,
+  onConfirm,
+  onHome,
+}) {
   const {
     date,
     startTime,
@@ -45,7 +50,7 @@ function SummaryPage({ bookingDetails, onEdit, onConfirm }) {
     : "Not selected";
 
   return (
-    <ReservationLayout>
+    <ReservationLayout onHome={onHome}>
       <section className="summary-section">
         <h2>Reservation Summary</h2>
 

@@ -1,7 +1,11 @@
 import { useState } from "react";
 import ReservationLayout from "../components/ReservationLayout";
 
-function BookingPage({ bookingDetails, onSubmit }) {
+function BookingPage({
+  bookingDetails,
+  onSubmit,
+  onHome,
+}) {
   const [date, setDate] = useState(bookingDetails.date);
   const [startTime, setStartTime] = useState(bookingDetails.startTime);
   const [duration, setDuration] = useState(bookingDetails.duration);
@@ -59,7 +63,7 @@ function BookingPage({ bookingDetails, onSubmit }) {
   };
 
   return (
-    <ReservationLayout>
+    <ReservationLayout onHome={onHome}>
       <section className="booking-section">
         <h2>Reserve a Table</h2>
 
