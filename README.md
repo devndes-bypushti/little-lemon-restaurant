@@ -78,6 +78,11 @@ src
 ```
 
 ---
+## Design
+
+The interface was designed in Figma before being implemented in React.
+
+**Figma Design:** [View the Figma file](https://www.figma.com/design/b89Ut8MLy31sKAMoeFUid3/little-lemon-restaurant?node-id=4-9&t=BtLW7R6OG5oxviZr-1)
 
 ## Installation
 
