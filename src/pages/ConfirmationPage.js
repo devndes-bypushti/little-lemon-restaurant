@@ -1,6 +1,10 @@
 import ReservationLayout from "../components/ReservationLayout";
 
-function ConfirmationPage({ bookingDetails, reservationNumber }) {
+function ConfirmationPage({
+  bookingDetails,
+  reservationNumber,
+  onHome,
+}) {
   const {
     date,
     startTime,
@@ -18,13 +22,16 @@ function ConfirmationPage({ bookingDetails, reservationNumber }) {
     : "Not selected";
 
   return (
-    <ReservationLayout>
+    <ReservationLayout onHome={onHome}>
       <section className="confirmation-section">
+
         <div className="confirmation-icon" aria-hidden="true">
           ✓
         </div>
 
-        <h2 className="confirmation-title">You're all set!</h2>
+        <h2 className="confirmation-title">
+          You're all set!
+        </h2>
 
         <p className="confirmation-message">
           Your table has been reserved successfully.
@@ -36,6 +43,7 @@ function ConfirmationPage({ bookingDetails, reservationNumber }) {
         </div>
 
         <div className="summary-card">
+
           <div className="summary-row">
             <span>Date</span>
             <strong>{formattedDate}</strong>
@@ -60,7 +68,9 @@ function ConfirmationPage({ bookingDetails, reservationNumber }) {
             <span>Seating Type</span>
             <strong>{seatingType}</strong>
           </div>
+
         </div>
+
       </section>
     </ReservationLayout>
   );

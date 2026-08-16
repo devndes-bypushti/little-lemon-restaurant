@@ -4,7 +4,7 @@ function RestaurantBanner() {
       <h1 id="restaurant-name">Little Lemon</h1>
 
       <p className="restaurant-location">
-        <span aria-hidden="true">°</span>
+        <span aria-hidden="true">📍</span>
         Chicago
       </p>
     </section>

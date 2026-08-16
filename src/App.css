@@ -625,8 +625,9 @@
   }
 
   .form-group fieldset {
-    display: contents;
-  }
+  padding: 0;
+  border: none;
+}
 
   .seating-options {
     justify-content: flex-start;
@@ -721,3 +722,22 @@
     width: 100%;
   }
 }
+
+@media (min-width: 700px) {
+  .form-group > .error-message {
+    grid-column: 2;
+    margin-top: 6px;
+    margin-bottom: 0;
+  }
+   fieldset.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  fieldset.form-group .error-message {
+    margin-top: 8px;
+  }
+}
+
+

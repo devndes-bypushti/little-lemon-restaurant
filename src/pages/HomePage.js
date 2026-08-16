@@ -7,7 +7,10 @@ import fishImage from "../assets/fish_food.jpg";
 import bruschettaImage from "../assets/bruschetta.jpg";
 import pastaImage from "../assets/pasta.jpg";
 
-function HomePage({ onReserveTable }) {
+function HomePage({
+  onReserveTable,
+  onHome,
+}) {
   const menuItems = [
     {
       id: 1,
@@ -45,7 +48,7 @@ function HomePage({ onReserveTable }) {
 
   return (
     <div className="app-container">
-      <Header />
+      <Header onHome={onHome} />
 
       <main className="home-page">
         {/* HERO SECTION */}
@@ -59,7 +62,7 @@ function HomePage({ onReserveTable }) {
             <div className="hero-text">
                 <h1>Little Lemon</h1>
 
-                <h3>Chicago</h3>
+                <h3>📍Chicago</h3>
 
                 <p>
                 We are a family owned Mediterranean restaurant,
