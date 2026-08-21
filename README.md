@@ -42,6 +42,7 @@ After confirming the reservation, users receive a confirmation screen displaying
 - JavaScript
 - HTML
 - CSS
+- Figma
 
 ---
 
@@ -83,6 +84,32 @@ src
 The interface was designed in Figma before being implemented in React.
 
 **Figma Design:** [View the Figma file](https://www.figma.com/design/b89Ut8MLy31sKAMoeFUid3/little-lemon-restaurant?node-id=4-9&t=BtLW7R6OG5oxviZr-1)
+
+#### Wireframes:
+
+<p align="center">
+  <img src="images/wireframe_landing_page.png" width="210">
+  &nbsp;&nbsp;&nbsp;
+  <img src="images/wireframe_reserve_a_table.png" width="210">
+  &nbsp;&nbsp;&nbsp;
+  <img src="images/wireframe_reservation_summary.png" width="210">
+  &nbsp;&nbsp;&nbsp;
+  <img src="images/wireframe_confirmation_page.png" width="210">
+</p>
+
+#### Final Screens:
+
+<p align="center">
+  <img src="images/screen%201.png" width="210">
+  &nbsp;&nbsp;&nbsp;
+  <img src="images/screen%202.png" width="210">
+  &nbsp;&nbsp;&nbsp;
+  <img src="images/screen%203.png" width="210">
+  &nbsp;&nbsp;&nbsp;
+  <img src="images/screen%204.png" width="210">
+</p>
+
+
 
 ## Installation
 
