@@ -88,25 +88,25 @@ The interface was designed in Figma before being implemented in React.
 #### Wireframes:
 
 <p align="center">
-  <img src="images/wireframe_landing_page.png" width="210">
+  <img src="images/wireframe_landing_page.png" width="180">
   &nbsp;&nbsp;&nbsp;
-  <img src="images/wireframe_reserve_a_table.png" width="210">
+  <img src="images/wireframe_reserve_a_table.png" width="180">
   &nbsp;&nbsp;&nbsp;
-  <img src="images/wireframe_reservation_summary.png" width="210">
+  <img src="images/wireframe_reservation_summary.png" width="180">
   &nbsp;&nbsp;&nbsp;
-  <img src="images/wireframe_confirmation_page.png" width="210">
+  <img src="images/wireframe_confirmation_page.png" width="180">
 </p>
 
 #### Final Screens:
 
 <p align="center">
-  <img src="images/screen%201.png" width="210">
+  <img src="images/screen%201.png" width="180">
   &nbsp;&nbsp;&nbsp;
-  <img src="images/screen%202.png" width="210">
+  <img src="images/screen%202.png" width="180">
   &nbsp;&nbsp;&nbsp;
-  <img src="images/screen%203.png" width="210">
+  <img src="images/screen%203.png" width="180">
   &nbsp;&nbsp;&nbsp;
-  <img src="images/screen%204.png" width="210">
+  <img src="images/screen%204.png" width="180">
 </p>
 
 
