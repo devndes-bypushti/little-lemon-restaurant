@@ -1,128 +1,94 @@
-# Little Lemon — Test Summary
+# Test Summary
 
-## 1. Overview
+## Project
 
-Manual quality assurance testing was performed on the Little Lemon restaurant reservation workflow.
+Little Lemon Restaurant Reservation Application
 
-The testing focused on functional correctness, input validation, boundary conditions, reservation data consistency, confirmation behaviour, responsive behaviour, and basic keyboard interaction.
+## Testing Scope
 
----
+Testing focused on the restaurant reservation workflow, including:
 
-## 2. Scope
-
-The following areas were tested:
-
-- Reservation form
-- Date selection and validation
-- Start time selection
-- Reservation duration
-- Guest count controls
-- Seating selection
-- Required-field validation
+- Reservation form functionality
+- Input validation
+- Guest count boundaries
 - Reservation summary
-- Reservation editing
-- Confirmation page
-- State retention during navigation
-- State behaviour after page reload
-- Mobile, tablet, and desktop layouts
-- Keyboard navigation and interaction
+- Editing reservation details
+- Responsive behaviour
+- Keyboard accessibility
+- Cross-browser automation
 
----
+## Manual Testing
 
-## 3. Testing Approach
-
-Testing was performed manually using Google Chrome.
-
-The testing approach included:
-
-- Positive testing
-- Negative testing
-- Boundary-value testing
-- State consistency testing
-- Responsive testing
-- Basic keyboard accessibility testing
-- Usability observation
-
----
-
-## 4. Results
+Manual testing was performed across the reservation flow.
 
 ### Functional Testing
 
-The core reservation workflow performed correctly across the tested valid and invalid scenarios.
+The reservation workflow was tested for:
 
-Required-field validation, guest count boundaries, time and duration selections, seating selection, reservation summary, editing, and confirmation details behaved as expected.
-
-### Boundary Testing
-
-The defined boundaries for:
-
-- Booking dates
-- Start times
-- Reservation duration
-- Guest count
-
-were tested.
-
-The calendar correctly prevented selection of past dates and dates outside the available booking period.
-
-However, one validation inconsistency was identified: past dates could be entered manually through keyboard input.
-
-### Data Consistency
-
-Reservation information remained consistent across the booking and summary flow.
-
-Changes made to reservation details were correctly reflected when reviewing the updated reservation.
+- Valid reservation submission
+- Required field validation
+- Date selection
+- Start time selection
+- Duration selection
+- Guest count controls
+- Seating selection
+- Reservation summary
+- Editing reservation details
+- Confirmation flow
 
 ### Responsive Testing
 
-The reservation flow remained usable across the tested mobile, tablet, and desktop viewports.
+The application was manually tested across phone, tablet, and desktop viewport sizes.
 
-On larger tablet and desktop widths, the content maintained a maximum width instead of expanding proportionally with the viewport. This did not prevent completion of the reservation flow.
+Observations:
 
-### Keyboard Interaction
+- Phone layouts worked well across tested devices.
+- Tablet and desktop layouts did not continuously expand beyond a certain width.
+- Content remained usable despite the maximum content width.
 
-Most tested controls were keyboard-operable.
+### Accessibility Testing
 
-Dropdowns could be navigated using the keyboard, guest controls could be operated using keyboard interaction, and seating options could be changed using arrow keys.
+Keyboard navigation was manually explored across the reservation form.
 
-The seating radio-button group showed an inconsistent focus/Tab interaction and requires further review.
+Observations included:
 
----
+- Dropdowns can be navigated using the keyboard.
+- Guest count controls can be operated using Enter.
+- Radio button interaction works through arrow-key navigation.
+- The final form action can be triggered using Enter.
+- Manually entering an invalid historical year into the date field was accepted even though the date picker prevents selecting past dates.
 
-## 5. Defects Identified
+## Automation Testing
 
-### BUG-01 — Manual date entry bypasses past-date restriction
+Playwright was used to automate five critical reservation scenarios:
 
-The calendar prevents users from selecting past dates, but manually entering a past date such as 2008 is accepted.
+1. Complete reservation successfully
+2. Required reservation fields must be completed
+3. Guest count cannot go below 1
+4. Guest count cannot exceed 10
+5. User can edit reservation details before confirmation
 
-**Severity:** Medium
+### Automation Result
 
-**Priority:** High
+**15/15 test executions passed**
 
-**Status:** Open
+The five automated scenarios were executed across:
 
-See `bug-reports.md` for reproduction details.
+- Chromium
+- Firefox
+- WebKit
 
----
+## Defects / Observations
 
-## 6. Usability Observations
+A date validation inconsistency was identified:
 
-The testing identified several improvement opportunities:
+- The date picker prevents users from selecting dates before the current date.
+- However, manually typing a historical year such as 2008 into the date input was accepted.
 
-1. Validation messages could have stronger visual emphasis.
-2. Keyboard interaction for the seating radio-button group could be made more predictable.
-3. The confirmation page could provide a clearer way to modify an existing reservation.
-4. Larger-screen layout behaviour could be reviewed for visual balance.
+This was documented as a validation defect/observation.
 
-See `usability-accessibility.md` for details.
+## Overall Result
 
----
+The core reservation workflow performed successfully during testing.
 
-## 7. Overall Assessment
-
-The core reservation workflow performed reliably across the tested scenarios.
-
-The testing identified one functional validation defect and several usability/accessibility improvement opportunities.
-
-The results demonstrate that structured testing can identify inconsistencies that may not be apparent during normal happy-path usage, particularly when testing boundary conditions and alternative interaction methods such as keyboard input.
+The project demonstrates functional testing, negative testing, boundary-value analysis, usability/accessibility testing, responsive testing, defect documentation, and browser automation using Playwright.

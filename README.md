@@ -142,3 +142,52 @@ The project will run locally at:
 ```text
 http://localhost:3000
 ```
+---
+
+## QA & Testing
+
+This project was also used as a hands-on QA testing exercise covering both manual and automated testing.
+
+### Manual Testing
+
+- Functional test case design
+- Positive and negative test scenarios
+- Boundary-value analysis
+- Validation testing
+- Responsive testing across phone, tablet, and desktop layouts
+- Keyboard accessibility testing
+- Defect identification and documentation
+
+### Playwright Automation
+
+Five critical reservation scenarios were automated using Playwright:
+
+1. Successful reservation flow
+2. Required-field validation
+3. Minimum guest boundary
+4. Maximum guest boundary
+5. Reservation editing workflow
+
+### Cross-Browser Testing
+
+The Playwright suite was executed across:
+
+- Chromium
+- Firefox
+- WebKit
+
+**Result: 15/15 automated test executions passed.**
+
+### QA Documentation
+
+Detailed testing documentation is available in:
+
+`src/components/testing/`
+
+including:
+
+- Test cases
+- Bug reports
+- Usability and accessibility observations
+- Test summary
+- Playwright automation coverage
